@@ -48,7 +48,7 @@ html
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Attractive Web Server!</h1>
+        <h1>Welcome to My Web Server!</h1>
         <p>This server is running on Windows Subsystem for Linux with Nginx.</p>
         <a href="#" class="button">Learn More</a>
     </div>
@@ -57,12 +57,14 @@ html
 Save and Exit:
 
 In Nano, press CTRL + O, Enter to save, then CTRL + X to exit.
+
 6. Fix "403 Forbidden" Errors (if needed)
 bash
 Copy code
 sudo chown -R www-data:www-data /var/www/html
 sudo find /var/www/html -type d -exec chmod 755 {} \;
 sudo find /var/www/html -type f -exec chmod 644 {} \;
+
 7. Allow WSL Traffic in Windows Firewall
 Open Windows Firewall with Advanced Security.
 Add an Inbound Rule to allow TCP traffic on port 80.
